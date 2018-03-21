@@ -1,0 +1,15 @@
+.withTab {
+  margin-top: 100rpx;
+}
+.swiper-container {
+  width: 100%;
+  height: 380rpx;
+}
+.swiperImg {
+  width: 100%;
+}
+.swiperImg image {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+}

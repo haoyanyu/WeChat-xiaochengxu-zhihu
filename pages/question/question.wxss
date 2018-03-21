@@ -1,0 +1,98 @@
+.container {
+  height: 100%;
+  background: #F0F4F3;
+} 
+.que-wrp {
+  background: #fff;
+  width: 100%;
+  font-size: 26rpx;
+  border-top: 1rpx solid #eee;
+  margin-bottom: 7rpx;
+}
+.que-wrp .que-item {
+  padding: 30rpx;
+}
+.que-item .tag {
+  display: inline-block;
+  background: #EEF5F8;
+  padding: 15rpx 20rpx;
+  border-radius: 25rpx;
+  color: #2186E2;
+  margin-right: 15rpx;
+}
+.que-wrp .que-title{
+  font-size: 38rpx;
+  letter-spacing: 1rpx;
+  padding-left: 35rpx;
+  line-height: 1.5;
+  height: 104rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.que-wrp .que-content {
+  line-height: 4;
+  padding-left: 35rpx;
+}
+
+.que-wrp .que-actions {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-bottom: 20rpx;
+ 
+}
+.que-actions .actions-left {
+  float: left
+}
+.que-actions .actions-left .action {
+  display: inline-block;
+  text-align:center;
+  padding: 0 20rpx;
+}
+.que-actions .actions-left .action image {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 10rpx;
+}
+.que-actions .actions-left .action text {
+  color: #AFAFAF;
+  margin-left: 10rpx;
+  line-height: 50rpx;
+}
+.que-actions .actions-right {
+  float: right;
+  margin-right:40rpx; 
+}
+.que-actions .actions-right button {
+  background: #52C980;
+  color: #fff;
+  padding: 10rpx 55rpx;
+}
+.que-wrp .answer-action {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  border-top: 1rpx solid #eee; 
+  border-bottom: 1rpx solid #eee; 
+  align-items: center;
+}
+.que-wrp .answer-action .answer {
+  flex: 1;
+  text-align: center;
+}
+.que-wrp .answer-action .answer:nth-child(1) {
+  border-right: 4rpx solid #eee;
+}
+.que-wrp .answer-action .answer image {
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+}
+.que-wrp .answer-action .answer text {
+  vertical-align: middle;
+  color: #889091;
+  font-size: 28rpx;
+  margin-left: 8rpx;
+}

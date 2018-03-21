@@ -1,0 +1,109 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /*padding: 200rpx 0;*/
+  box-sizing: border-box;
+  background: #F0F4F3;
+} 
+
+.container.withtab{
+  margin: 105rpx 0 0 0;
+}
+.flex-wrp{
+  display: flex;
+}
+ .flex-tab{
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+ .flex-item{
+  flex-grow: 1;
+  text-align: center;
+} 
+.top-tab{
+  width: 750rpx;
+  height: 100rpx;
+  background: #298DE5;
+  color: #8CCEFD;
+  font-size: 28rpx;
+  line-height: 100rpx;
+  box-shadow: 0 2px 2px #bebebe;
+  margin: 0 0 8rpx 0;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+.top-tab .active{
+  color: #ffffff;
+  border-bottom: solid 2px #ffffff;
+} 
+.container{
+  padding: 0;
+  font-size: 14rpx;
+  color: #000;
+}
+.container .feed-item {
+  background: #fff;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+  padding: 30rpx 20rpx 15rpx 20rpx;
+  margin:7rpx 0 6rpx 0;
+  box-shadow: 0 2px 5px #eeeeee;
+  font-size: 26rpx;
+}
+.container .feed-item .feed-source {
+  
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-bottom: 15rpx;
+}
+.container .feed-item .feed-source a {
+  float: left;
+}
+.container .feed-item .feed-source a .avatar {
+  display: inline-block;
+  height: 50rpx;
+  margin-bottom: 10rpx;
+  vertical-align: middle;
+}
+.container .feed-item .feed-source a .avatar image {
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right:15rpx;
+}
+.container .feed-item .feed-source a text {
+  color: #A0ACAC;
+}
+.container .feed-item .feed-source .item-more {
+  float: right;
+  width: 45rpx;
+  height: 50rpx;
+}
+.container .feed-item .feed-content .answer-body {
+  line-height: 1.25;
+  color: #5B5B5B;
+  font-size: 24rpx;
+}
+.container .feed-item .feed-content .answer-actions {
+  color: #A0ACAC;
+  margin-top:15rpx;
+  font-size: 26rpx;
+}
+.container .feed-item .feed-content .answer-actions .action {
+  display: inline-block;
+  margin-right: 5rpx;
+}
+.container .feed-item .feed-content .answer-actions .dot::after {
+  content: '·';
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-left: 5rpx;
+}

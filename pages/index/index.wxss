@@ -1,0 +1,52 @@
+/**index.wxss**/
+.search-placeholder {
+  color: #A8D8FA;
+  font-size: 26rpx;
+  line-height: 36rpx;
+}
+.search {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #2A8CE5;
+  height: 75rpx;
+  padding: 12rpx;
+  box-sizing: content-box;
+}
+.search-left {
+  flex: 8;
+  text-align: left;
+  background: #4EA3E7;
+}
+.search-left image {
+  display: inline-block;
+  height: 40rpx;
+  width: 40rpx;
+  padding: 0 15rpx 17rpx 20rpx; 
+}
+.search-left input{
+  display: inline-block;
+  height: 75rpx;
+  line-height: 36px;
+}
+.search-right {
+  flex: 1;
+}
+.search-right image {
+  display: block;
+  width: 45rpx;
+  height: 45rpx;
+  padding: 5px 0 10px 10px
+}
+.container {
+  height: 1359rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #F0F4F3;
+  margin-top: 100rpx;
+}

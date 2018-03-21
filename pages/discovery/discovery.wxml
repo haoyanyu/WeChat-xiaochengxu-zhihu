@@ -1,0 +1,68 @@
+<!--top tabbar  -->
+<view class='top-tab flex-wrp flex-tab'>
+  <view class='topTab flex-item {{currentTab== 0 ? "active":""}}' data-idx='0' bindtap='switchTab'>推荐</view>
+  <view class='topTab flex-item {{currentTab == 1 ? "active":""}}' data-idx='1' bindtap='switchTab'>圆桌</view>
+  <view class='topTab flex-item {{currentTab == 2 ? "active":""}}' data-idx='2' bindtap='switchTab'>热门</view>
+  <view class='topTab flex-item {{currentTab == 3 ? "active":""}}' data-idx='3' bindtap='switchTab'>收藏</view>
+</view>
+
+<!--scroll-view  -->
+<scroll-view class='container withTab'>
+<!--推荐  -->
+  <view class='' hidden="{{currentTab==0 ? '' : true}}">
+    <swiper class='swiper-container' indicator-dots='true' autoplay='true' interval='5000' duration='1000' indicator-color='#FFFFFF'>
+      <block wx:for='{{imgUrls}}'>
+        <swiper-item class='swiperImg'>
+          <image src='{{item}}'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view>
+      <block wx:for="{{feed}}" wx:for-index="inx" wx:for-item="item" data-idx="{{inx}}">
+        <view class="feed-item">
+          <view class='feed-source'>
+            <a>
+              <view class='avatar'>
+                <image src='{{item.feed_source_img}}'></image>
+              </view>
+              <text>{{item.feed_source_name}}{{item.feed_source_txt}}</text>
+            </a>
+            <image class='item-more' mode="aspectFit" src='../../images/more.png'></image>
+          </view>
+          <view class='feed-content'>
+            <view class='question' bindtap='questionTap'>
+              <a class='question-link'>
+                <text>{{item.question}}</text>
+              </a>
+            </view>
+            <view class='answer-body'>
+              <view class='' bindtap='itemTap'>
+                <text class='answer-txt'>
+                {{item.answer_ctnt}}
+                </text>
+              </view>
+              <view class='answer-actions'>
+                <view class='like dot action'>
+                  <a>{{item.good_num}} 赞同</a>
+                </view>
+                <view class='comments dot action'>
+                  <a>{{item.comment_num}} 评论</a>
+                </view>
+                <view class='follow-it action'>
+                  <a>关注问题</a>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+<!--圆桌  -->
+  <view></view>
+<!--热门  -->
+  <view></view>
+<!--收藏  -->
+  <view></view>
+</scroll-view>

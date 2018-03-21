@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<!--search  -->
+ <view class="search flex-wrp">
+  <view class="search-left flex-item">
+    <image src='../../images/search.png'></image>
+    <input placeholder='搜索话题，问题或作者' placeholder-class='search-placeholder'/>
+  </view>
+  <view class="search-right flex-item" bindtap='upper'>
+    <image src='../../images/lighting.png'></image>
+  </view>
+</view> 
+<!--container  -->
+<scroll-view scroll-y="true" class='container' bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+  <block wx:for="{{feed}}" wx:for-index="inx" wx:for-item="item" data-idx="{{inx}}">
+    <view class="feed-item">
+      <view class='feed-source'>
+        <a>
+          <view class='avatar'>
+            <image src='{{item.feed_source_img}}'></image>
+          </view>
+          <text>{{item.feed_source_name}}{{item.feed_source_txt}}</text>
+        </a>
+        <image class='item-more' mode="aspectFit" src='../../images/more.png'></image>
+      </view>
+      <view class='feed-content'>
+        <view class='question' bindtap='questionTap'>
+          <a class='question-link'>
+            <text>{{item.question}}</text>
+          </a>
+        </view>
+        <view class='answer-body'>
+          <view class='' bindtap='itemTap'>
+            <text class='answer-txt'>
+            {{item.answer_ctnt}}
+            </text>
+          </view>
+          <view class='answer-actions'>
+            <view class='like dot action'>
+              <a>{{item.good_num}} 赞同</a>
+            </view>
+            <view class='comments dot action'>
+              <a>{{item.comment_num}} 评论</a>
+            </view>
+            <view class='follow-it action'>
+              <a>关注问题</a>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+
+</scroll-view>
